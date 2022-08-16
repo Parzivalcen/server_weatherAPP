@@ -18,8 +18,12 @@ app.set('trust proxy', 1);
 //Routes
 app.use('/api', require('./routes/openWeather'));
 
+let corsOptions = {
+  origin: 'http://localhost:8080/',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 // Enable cors
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
