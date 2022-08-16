@@ -20,6 +20,6 @@ app.use('/api', require('./routes/openWeather'));
 
 
 // Enable cors
-// app.use(cors());
+app.use(cors());
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
