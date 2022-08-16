@@ -18,6 +18,7 @@ let cache = apicache.middleware
 
 router.get('/', cache('3 minutes'), async (req, res) => {
   try {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
     // URL Params
     // Takes an obj of parameters that we want to add
     const params = new URLSearchParams({
