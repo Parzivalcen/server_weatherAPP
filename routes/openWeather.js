@@ -19,7 +19,7 @@ let cache = apicache.middleware
 router.get('/', cache('3 minutes'), async (req, res) => {
   try {
     //this allows us to call the app hosted on Heroku from local host
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080, https://parzivalcen.github.io/weatherApp/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://parzivalcen.github.io/weatherApp/');
     // URL Params
     // Takes an obj of parameters that we want to add
     const params = new URLSearchParams({
