@@ -9,7 +9,7 @@ const app = express();
 // Rate limiter
 const limiter = rateLimit({
   windowMS: 10 * 60 * 1000, // 10 minutes window
-  // 5 calls in the time window
+  // 50 calls in the time window
   max: 50,
 });
 app.use(limiter);
